@@ -1,0 +1,10 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7P9PH6",
+  "type": "event",
+  "sentAt": 1787443203060,
+  "kind": "queue_update",
+  "payload": {
+    "pendingJobs": 3
+  }
+}

@@ -1,0 +1,15 @@
+# Prettier must never rewrite these, even under `prettier --write .`.
+# TS style is governed by eslint (CI); Swift by swiftformat (CI).
+# This file only protects byte-sensitive / generated / parser-less paths.
+
+pnpm-lock.yaml
+justfile
+dist/
+.build/
+*.tsbuildinfo
+*.db
+spool/
+run/
+*.log
+node_modules/
+apps/recorder-macos/Fixtures

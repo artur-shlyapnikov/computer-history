@@ -1,0 +1,8 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PZZZ0",
+  "type": "request",
+  "sentAt": 1787443204000,
+  "op": "status.get",
+  "requestId": "not-a-ulid"
+}

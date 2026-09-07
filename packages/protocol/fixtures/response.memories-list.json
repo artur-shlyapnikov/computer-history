@@ -1,0 +1,52 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VEKK",
+  "type": "response",
+  "sentAt": 1787443203050,
+  "requestId": "01M0NP9G4HP0M1M64H8TC0VEKJ",
+  "ok": true,
+  "result": {
+    "groups": [
+      {
+        "status": "confirmed",
+        "memories": [
+          {
+            "id": "01M0NP9G4HP0M1M64H8TC0VEKM",
+            "kind": "preference",
+            "canonicalKey": "editor_preference_dark_theme",
+            "text": "Prefers dark theme in code editors",
+            "confidence": 0.86,
+            "status": "active",
+            "firstSeenAtMs": 1787000000000,
+            "lastSeenAtMs": 1787443200000,
+            "evidenceCount": 3,
+            "createdAtMs": 1787000100000,
+            "updatedAtMs": 1787443200000
+          }
+        ]
+      },
+      {
+        "status": "suggestions",
+        "memories": [
+          {
+            "id": "01M0NP9G4HP0M1M64H8TC0VEKN",
+            "kind": "fact",
+            "canonicalKey": "deploy_day",
+            "text": "Deploys to production every friday",
+            "confidence": 0.72,
+            "status": "candidate",
+            "firstSeenAtMs": 1787356800000,
+            "lastSeenAtMs": 1787443200000,
+            "evidenceCount": 2,
+            "createdAtMs": 1787356800000,
+            "updatedAtMs": 1787443200000
+          }
+        ]
+      },
+      {
+        "status": "rejected",
+        "memories": []
+      }
+    ]
+  }
+}

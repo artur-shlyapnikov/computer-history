@@ -1,0 +1,23 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VEKE",
+  "type": "response",
+  "sentAt": 1787443202050,
+  "requestId": "01M0NP9G4HP0M1M64H8TC0VEKD",
+  "ok": true,
+  "result": {
+    "hits": [
+      {
+        "source": {
+          "episodeId": "01M0NP9G4HP0M1M64H8TC0VEKF",
+          "stepId": "01M0NP9G4HP0M1M64H8TC0VEKG",
+          "startedAtMs": 1787439000000,
+          "endedAtMs": 1787441400000,
+          "appNames": ["Safari", "Slack"],
+          "snippet": "Investigated webhook failures in the payments integration"
+        },
+        "score": 0.87
+      }
+    ]
+  }
+}

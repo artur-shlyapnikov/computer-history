@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PCXP7",
+  "type": "event",
+  "sentAt": 1787443203070,
+  "kind": "recording_state",
+  "payload": {
+    "state": "paused",
+    "reason": "disk_pressure"
+  }
+}

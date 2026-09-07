@@ -1,0 +1,19 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PZZZ0",
+  "type": "event_batch",
+  "sentAt": 1787443204000,
+  "batchId": "not-a-ulid",
+  "events": [
+    {
+      "id": "01M0NP9G4HP0M1M64H8TC0VE00",
+      "observedAt": 1787443203000,
+      "source": "workspace",
+      "app": {
+        "bundleId": "com.apple.Safari"
+      },
+      "action": "app_focus",
+      "contentPolicy": "metadata_only"
+    }
+  ]
+}

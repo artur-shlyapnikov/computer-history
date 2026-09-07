@@ -1,0 +1,34 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PJB09",
+  "type": "response",
+  "sentAt": 1787443204010,
+  "requestId": "01M0NYNJXRTW00B4PKZA7PF4V8",
+  "ok": true,
+  "result": {
+    "daemon": {
+      "version": "0.1.0",
+      "schemaVersion": 6,
+      "uptimeMs": 3600000
+    },
+    "recording": {
+      "paused": false
+    },
+    "accessibilityRequired": false,
+    "queue": {
+      "pending": 2,
+      "retrying": 0,
+      "dead": 1
+    },
+    "db": {
+      "rawEvents": 152340,
+      "segments": 9821,
+      "steps": 12456,
+      "episodes": 310,
+      "memories": 87,
+      "workflows": 12,
+      "pageCountBytes": 46137344
+    },
+    "diskFreeBytes": 214748364800
+  }
+}

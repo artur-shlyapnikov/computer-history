@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7P3874",
+  "type": "response",
+  "sentAt": 1787443203020,
+  "requestId": "01M0PCXXGS8P3T9559N9P8A8H1",
+  "ok": false,
+  "error": {
+    "code": "error.invalid_params",
+    "message": "chat.send: params failed schema validation"
+  }
+}

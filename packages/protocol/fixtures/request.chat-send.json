@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0PCXXGS8P3T9559N9P8A8H0",
+  "type": "request",
+  "sentAt": 1787443203000,
+  "op": "chat.send",
+  "requestId": "01M0PCXXGS8P3T9559N9P8A8H1",
+  "params": {
+    "sessionId": "01M0PCXXGS8P3T9559N9P8A8H2",
+    "text": "Что я вчера делал после созвона?"
+  }
+}

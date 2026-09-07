@@ -1,0 +1,17 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT2A9HF20S4T03QTB70",
+  "type": "response",
+  "sentAt": 1787443208050,
+  "requestId": "01M0NYNQT1VCR5N1D31SH1S8PB",
+  "ok": true,
+  "result": {
+    "deleted": {
+      "rawEvents": 142,
+      "steps": 37,
+      "episodes": 3,
+      "memories": 1,
+      "workflows": 0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# swiftformat configuration — aligned with .swiftlint.yml
+--swiftversion 6.0
+--enable blankLinesAtStartOfScope,blankLinesBetweenScopes
+--disable sortedImports
+--exclude .build

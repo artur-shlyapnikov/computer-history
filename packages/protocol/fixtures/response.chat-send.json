@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0PCXXGS8P3T9559N9P8A8H3",
+  "type": "response",
+  "sentAt": 1787443203010,
+  "requestId": "01M0PCXXGS8P3T9559N9P8A8H1",
+  "ok": true,
+  "result": {
+    "requestId": "01M0PCXXGS8P3T9559N9P8A8H4",
+    "sessionId": "01M0PCXXGS8P3T9559N9P8A8H2"
+  }
+}

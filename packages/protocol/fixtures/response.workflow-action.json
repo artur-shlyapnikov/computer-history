@@ -1,0 +1,35 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VF01",
+  "type": "response",
+  "sentAt": 1787443206050,
+  "requestId": "01M0NP9G4HP0M1M64H8TC0VEKW",
+  "ok": true,
+  "result": {
+    "updated": {
+      "id": "01M0NP9G4HP0M1M64H8TC0VEKM",
+      "name": "File bug report from Slack thread",
+      "purpose": "Turn a Slack bug discussion into a tracked Jira issue.",
+      "status": "confirmed",
+      "template": {
+        "name": "File bug report from Slack thread",
+        "purpose": "Turn a Slack bug discussion into a tracked Jira issue.",
+        "preconditions": ["Slack thread contains a reproducible problem"],
+        "stableSteps": [
+          "slack.read.thread",
+          "jira.create.issue",
+          "jira.edit.description",
+          "slack.post.link"
+        ],
+        "variableInputs": ["issue title", "reproduction steps text"],
+        "expectedOutcome": "Jira issue exists and its link is posted back to Slack."
+      },
+      "occurrenceCount": 3,
+      "medianSimilarity": 0.81,
+      "firstSeenAtMs": 1785000000000,
+      "lastSeenAtMs": 1787443200000,
+      "createdAtMs": 1787443200000,
+      "updatedAtMs": 1787443206000
+    }
+  }
+}

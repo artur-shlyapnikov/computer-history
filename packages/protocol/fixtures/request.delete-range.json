@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT0EG789R7ZPHGHQD5H",
+  "type": "request",
+  "sentAt": 1787443208000,
+  "op": "delete.range",
+  "requestId": "01M0NYNQT1VCR5N1D31SH1S8PB",
+  "params": {
+    "preset": "last_hour"
+  }
+}

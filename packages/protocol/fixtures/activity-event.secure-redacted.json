@@ -1,0 +1,24 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VEK6",
+  "observedAt": 1787443201200,
+  "monotonicNs": 841234568990,
+  "source": "accessibility",
+  "app": {
+    "bundleId": "com.apple.Terminal",
+    "name": "Terminal",
+    "pid": 2048
+  },
+  "window": {
+    "title": "ssh deploy@prod"
+  },
+  "action": "text_change",
+  "target": {
+    "role": "AXTextField",
+    "subrole": "AXSecureTextField",
+    "label": "Password:",
+    "identifier": "password-field"
+  },
+  "content": null,
+  "contentPolicy": "redacted_secure_field",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

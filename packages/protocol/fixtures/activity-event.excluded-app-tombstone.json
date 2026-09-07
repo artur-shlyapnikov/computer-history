@@ -1,0 +1,14 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VESF",
+  "observedAt": 1787443202400,
+  "monotonicNs": 841234570200,
+  "source": "workspace",
+  "app": {
+    "bundleId": "com.apple.Safari",
+    "name": "Safari",
+    "pid": 1042
+  },
+  "action": "click",
+  "contentPolicy": "excluded_app",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

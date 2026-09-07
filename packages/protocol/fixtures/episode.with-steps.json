@@ -1,0 +1,43 @@
+{
+  "episode": {
+    "id": "01M0NP9G4HP0M1M64H8TC0VEKF",
+    "startedAtMs": 1787439000000,
+    "endedAtMs": 1787441400000,
+    "title": "Investigated webhook failures",
+    "summary": "Traced failing payment webhook deliveries from Stripe logs through the local proxy and identified a stale signing secret.",
+    "intent": "Debug why payment webhooks stopped arriving",
+    "outcome": "Root cause found: stale signing secret after rotation",
+    "apps": ["com.apple.Safari", "com.apple.Terminal", "rebel.slack"],
+    "entities": ["stripe", "webhooks", "TANGO-123"],
+    "summaryModel": null,
+    "summaryPromptVersion": null,
+    "createdAtMs": 1787441500000,
+    "updatedAtMs": 1787441500000
+  },
+  "steps": [
+    {
+      "id": "01M0NP9G4HP0M1M64H8TC0VEKG",
+      "segmentId": "01M0NP9G4HP0M1M64H8TC0VEKH",
+      "ordinal": 0,
+      "startedAtMs": 1787439000000,
+      "endedAtMs": 1787439060000,
+      "action": "edit_text",
+      "appBundleId": "com.apple.Safari",
+      "appName": "Safari",
+      "target": "textarea#issue-comment",
+      "text": "Reproduced the failure with a test delivery."
+    },
+    {
+      "id": "01M0NP9G4HP0M1M64H8TC0VEKJ",
+      "segmentId": "01M0NP9G4HP0M1M64H8TC0VEKH",
+      "ordinal": 1,
+      "startedAtMs": 1787439100000,
+      "endedAtMs": 1787439400000,
+      "action": "scroll",
+      "appBundleId": "com.apple.Safari",
+      "appName": "Safari",
+      "target": "AXScrollArea",
+      "text": null
+    }
+  ]
+}

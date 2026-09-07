@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PNJ5A",
+  "type": "request",
+  "sentAt": 1787443204200,
+  "op": "episode.get",
+  "requestId": "01M0NYNJXRTW00B4PKZA7PNJ5A",
+  "params": {
+    "id": "01M0NP9G4HP0M1M64H8TC0VEKF"
+  }
+}

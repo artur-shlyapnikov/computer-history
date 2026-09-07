@@ -1,0 +1,19 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT52KQJ21K1A5KGXBWH",
+  "type": "response",
+  "sentAt": 1787443209150,
+  "requestId": "01M0NYNQT3E1F4SEHWGCTGM4DJ",
+  "ok": true,
+  "result": {
+    "integrityOk": true,
+    "lastErrors": [
+      {
+        "at": 1787443200000,
+        "scope": "ingest",
+        "code": "bad_batch",
+        "message": "dropped malformed batch"
+      }
+    ]
+  }
+}

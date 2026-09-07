@@ -1,0 +1,8 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4GXXGYT7PYGFC5K5HT",
+  "type": "server_hello",
+  "sentAt": 1787443200042,
+  "daemonVersion": "0.1.0",
+  "databaseSchemaVersion": 6
+}

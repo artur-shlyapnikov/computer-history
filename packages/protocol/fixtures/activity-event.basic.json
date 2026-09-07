@@ -1,0 +1,21 @@
+{
+  "id": "01M0NP9G4GXXGYT7PYGFC5K5HV",
+  "observedAt": 1787443200100,
+  "monotonicNs": 841234567890,
+  "source": "workspace",
+  "app": {
+    "bundleId": "com.apple.Safari",
+    "name": "Safari",
+    "pid": 1042
+  },
+  "window": {
+    "title": "Webhook failures — GitHub"
+  },
+  "action": "app_focus",
+  "target": {
+    "role": "AXApplication",
+    "label": "Safari"
+  },
+  "contentPolicy": "metadata_only",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

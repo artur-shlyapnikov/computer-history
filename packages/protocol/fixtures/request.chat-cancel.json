@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0PCXXGS8P3T9559N9P8A8H5",
+  "type": "request",
+  "sentAt": 1787443203200,
+  "op": "chat.cancel",
+  "requestId": "01M0PCXXGS8P3T9559N9P8A8H6",
+  "params": {
+    "requestId": "01M0PCXXGS8P3T9559N9P8A8H4"
+  }
+}

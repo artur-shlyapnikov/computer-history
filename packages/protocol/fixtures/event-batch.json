@@ -1,0 +1,50 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VEK7",
+  "type": "event_batch",
+  "sentAt": 1787443201500,
+  "batchId": "01M0NP9G4HP0M1M64H8TC0VEK8",
+  "events": [
+    {
+      "id": "01M0NP9G4GXXGYT7PYGFC5K5HV",
+      "observedAt": 1787443200100,
+      "monotonicNs": 841234567890,
+      "source": "workspace",
+      "app": {
+        "bundleId": "com.apple.Safari",
+        "name": "Safari",
+        "pid": 1042
+      },
+      "window": {
+        "title": "Webhook failures — GitHub"
+      },
+      "action": "app_focus",
+      "target": {
+        "role": "AXApplication",
+        "label": "Safari"
+      },
+      "contentPolicy": "metadata_only",
+      "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+    },
+    {
+      "id": "01M0NP9G4HP0M1M64H8TC0VEKA",
+      "observedAt": 1787443201300,
+      "monotonicNs": 841234569090,
+      "source": "accessibility",
+      "app": {
+        "bundleId": "com.apple.Safari",
+        "name": "Safari",
+        "pid": 1042
+      },
+      "window": {
+        "title": "Webhook failures — GitHub"
+      },
+      "action": "scroll",
+      "target": {
+        "role": "AXScrollArea"
+      },
+      "contentPolicy": "metadata_only",
+      "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+    }
+  ]
+}

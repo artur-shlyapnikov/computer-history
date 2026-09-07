@@ -1,0 +1,23 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VERF",
+  "observedAt": 1787443202200,
+  "monotonicNs": 841234570000,
+  "source": "accessibility",
+  "app": {
+    "bundleId": "com.apple.Notes",
+    "name": "Notes",
+    "pid": 3072
+  },
+  "window": {
+    "title": "Incident postmortem draft"
+  },
+  "action": "text_change",
+  "target": {
+    "role": "AXTextArea",
+    "label": "Note body",
+    "identifier": "note-body"
+  },
+  "content": null,
+  "contentPolicy": "redacted_oversize",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

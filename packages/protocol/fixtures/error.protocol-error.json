@@ -1,0 +1,10 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7P6FC5",
+  "type": "error",
+  "sentAt": 1787443203015,
+  "error": {
+    "code": "error.bad_frame",
+    "message": "frame did not decode as any known envelope type"
+  }
+}

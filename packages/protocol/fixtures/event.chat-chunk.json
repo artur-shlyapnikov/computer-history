@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0PCXXGS8P3T9559N9P8A8H7",
+  "type": "event",
+  "sentAt": 1787443203050,
+  "kind": "chat_chunk",
+  "payload": {
+    "requestId": "01M0PCXXGS8P3T9559N9P8A8H4",
+    "delta": "Вчера после созвона ты "
+  }
+}

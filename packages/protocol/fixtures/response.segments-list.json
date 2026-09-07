@@ -1,0 +1,45 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRA5DWRVMAZSRFZECG",
+  "type": "response",
+  "sentAt": 1787443203010,
+  "requestId": "01M0NYNJXRT1PYWJ19YREPCNP7",
+  "ok": true,
+  "result": {
+    "segments": [
+      {
+        "id": "01M0NYNJXRGDZ489B388266966",
+        "startedAtMs": 1787443200100,
+        "endedAtMs": 1787443215000,
+        "state": "finalized",
+        "stepCount": 2,
+        "steps": [
+          {
+            "id": "01M0NYNJXRRAYPZCQ056KQ2DS5",
+            "segmentId": "01M0NYNJXRGDZ489B388266966",
+            "ordinal": 1,
+            "startedAtMs": 1787443200100,
+            "endedAtMs": 1787443201300,
+            "action": "switch_app",
+            "appBundleId": "com.apple.Safari",
+            "appName": "Safari",
+            "target": "Safari",
+            "text": null
+          },
+          {
+            "id": "01M0NYNJXR106KA0CQNKZ04MF4",
+            "segmentId": "01M0NYNJXRGDZ489B388266966",
+            "ordinal": 2,
+            "startedAtMs": 1787443201300,
+            "endedAtMs": 1787443202500,
+            "action": "scroll",
+            "appBundleId": "com.apple.Safari",
+            "appName": "Safari",
+            "target": "Webhook failures — GitHub",
+            "text": null
+          }
+        ]
+      }
+    ]
+  }
+}

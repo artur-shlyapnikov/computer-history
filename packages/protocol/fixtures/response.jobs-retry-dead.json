@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT52KQJ21K1A5KGXBWF",
+  "type": "response",
+  "sentAt": 1787443209050,
+  "requestId": "01M0NYNQT3E1F4SEHWGCTGM4DH",
+  "ok": true,
+  "result": {
+    "retried": 2
+  }
+}

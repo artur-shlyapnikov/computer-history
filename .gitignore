@@ -1,0 +1,32 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+.build/
+DerivedData/
+*.tsbuildinfo
+coverage/
+.nyc_output/
+
+# Local application state and logs (never commit a personal history)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+spool/
+run/
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# macOS / Xcode
+.DS_Store
+*.xcresult
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/

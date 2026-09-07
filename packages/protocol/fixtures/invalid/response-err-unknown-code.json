@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PZZZ3",
+  "type": "response",
+  "sentAt": 1787443204000,
+  "requestId": "01M0NYNJXRTW00B4PKZA7PZZZ1",
+  "ok": false,
+  "error": {
+    "code": "error.banana",
+    "message": "nope"
+  }
+}

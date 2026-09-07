@@ -1,0 +1,30 @@
+{
+  "name": "@computer-history/daemon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && mkdir -p dist/db dist/agent && cp -R src/db/migrations/. dist/db/migrations/ && cp src/agent/system-prompt.md dist/agent/system-prompt.md",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "npx eslint src test",
+    "test": "pnpm --filter @computer-history/protocol build && pnpm build && vitest run",
+    "dev": "node dist/main.js"
+  },
+  "dependencies": {
+    "@computer-history/protocol": "workspace:*",
+    "@earendil-works/pi-coding-agent": "0.84.2",
+    "@sinclair/typebox": "^0.34.52",
+    "better-sqlite3": "^13.0.0",
+    "ulid": "^3.0.0",
+    "typebox": "^1.3.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.0"
+  }
+}

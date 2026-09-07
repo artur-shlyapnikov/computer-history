@@ -1,0 +1,9 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT42A36C3WV9MHH8WVY",
+  "type": "request",
+  "sentAt": 1787443209000,
+  "op": "jobs.retryDead",
+  "requestId": "01M0NYNQT3E1F4SEHWGCTGM4DH",
+  "params": {}
+}

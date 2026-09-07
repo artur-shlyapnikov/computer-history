@@ -1,0 +1,23 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VEKD",
+  "observedAt": 1787443201600,
+  "monotonicNs": 841234569400,
+  "source": "accessibility",
+  "app": {
+    "bundleId": "com.apple.Safari",
+    "name": "Safari",
+    "pid": 4096
+  },
+  "window": {
+    "title": "Sign in — iCloud"
+  },
+  "action": "text_change",
+  "target": {
+    "role": "AXTextField",
+    "label": "Password:",
+    "identifier": "password-field"
+  },
+  "content": null,
+  "contentPolicy": "redacted_sensitive_target",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

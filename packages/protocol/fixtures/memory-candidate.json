@@ -1,0 +1,13 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VEKK",
+  "kind": "preference",
+  "canonicalKey": "editor.preference.dark-theme",
+  "text": "Prefers dark theme in code editors",
+  "confidence": 0.86,
+  "status": "candidate",
+  "firstSeenAtMs": 1787000000000,
+  "lastSeenAtMs": 1787443200000,
+  "evidenceCount": 3,
+  "createdAtMs": 1787000100000,
+  "updatedAtMs": 1787443200000
+}

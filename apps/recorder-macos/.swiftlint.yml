@@ -1,0 +1,50 @@
+# SwiftLint configuration — curated baseline aligned with .swiftformat.
+# Default rules are on; this file pins exclusions, thresholds and opt-ins.
+excluded:
+  - .build
+  - .swiftpm
+  # Tests stay covered by swiftformat + the compiler; force-try/unwrap are
+  # idiomatic in test setup and test data lines exceed the 160-col format.
+  - Tests
+
+disabled_rules:
+  # Style rules owned by swiftformat — double-enforcement only adds noise.
+  - trailing_comma
+  - opening_brace
+  # Size metrics: the app facade (AppState) and test suites are intentionally
+  # large; complexity is covered by code review, not line counts.
+  - type_body_length
+  - file_length
+  - function_body_length
+  - cyclomatic_complexity
+  - nesting
+
+opt_in_rules:
+  # Real hazards in C-interop / concurrency-heavy recorder code
+  - force_unwrapping
+  - force_try
+  - explicit_init
+  - empty_count
+  # Collection algorithm preferences (cheap perf wins on hot paths)
+  - first_where
+  - last_where
+  - contains_over_first_not_nil
+  - sorted_first_last
+
+force_unwrapping:
+  severity: error
+
+force_try:
+  severity: error
+
+empty_count:
+  severity: error
+
+# swiftformat (160 cols) is the formatting authority; keep lint in sync.
+line_length:
+  warning: 160
+  error: 200
+
+identifier_name:
+  min_length: 1
+  max_length: 60

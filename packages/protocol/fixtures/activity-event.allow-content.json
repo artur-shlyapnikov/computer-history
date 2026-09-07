@@ -1,0 +1,23 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VEPF",
+  "observedAt": 1787443201800,
+  "monotonicNs": 841234569600,
+  "source": "accessibility",
+  "app": {
+    "bundleId": "com.apple.Safari",
+    "name": "Safari",
+    "pid": 4096
+  },
+  "window": {
+    "title": "Release checklist — web"
+  },
+  "action": "text_change",
+  "target": {
+    "role": "AXTextArea",
+    "label": "Comment",
+    "identifier": "comment-body"
+  },
+  "content": "Shipped the exporter behind a feature flag today",
+  "contentPolicy": "allow",
+  "captureSessionId": "01M0NP9G4GXXGYT7PYGFC5K5HZ"
+}

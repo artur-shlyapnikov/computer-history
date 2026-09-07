@@ -1,0 +1,9 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNQT42A36C3WV9MHH8WW0",
+  "type": "request",
+  "sentAt": 1787443209100,
+  "op": "diagnostics.get",
+  "requestId": "01M0NYNQT3E1F4SEHWGCTGM4DJ",
+  "params": {}
+}

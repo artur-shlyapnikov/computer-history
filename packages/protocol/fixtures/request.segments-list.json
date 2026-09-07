@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PCSVB",
+  "type": "request",
+  "sentAt": 1787443203000,
+  "op": "segments.list",
+  "requestId": "01M0NYNJXRT1PYWJ19YREPCNP7",
+  "params": {
+    "limit": 50
+  }
+}

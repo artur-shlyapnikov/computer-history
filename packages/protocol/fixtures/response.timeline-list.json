@@ -1,0 +1,30 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NYNJXRTW00B4PKZA7PCSWA",
+  "type": "response",
+  "sentAt": 1787443204500,
+  "requestId": "01M0NYNJXRT1PYWJ19YREPCNP7",
+  "ok": true,
+  "result": {
+    "episodes": [
+      {
+        "id": "01M0NP9G4HP0M1M64H8TC0VEKF",
+        "startedAtMs": 1787439000000,
+        "endedAtMs": 1787441400000,
+        "title": "Investigated webhook failures",
+        "appNames": ["Safari", "Terminal", "Slack"],
+        "stepCount": 12,
+        "pendingJobs": 2
+      },
+      {
+        "id": "01M0NQK2W8X4J7C0V5B9D3H6MT",
+        "startedAtMs": 1787435400000,
+        "endedAtMs": 1787437200000,
+        "title": "Drafted release notes",
+        "appNames": ["Safari"],
+        "stepCount": 5,
+        "pendingJobs": 2
+      }
+    ]
+  }
+}

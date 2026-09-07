@@ -1,0 +1,12 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Transitive Pi-SDK deps whose postinstall builds are irrelevant to us.
+allowBuilds:
+  '@google/genai': false
+  # pnpm 11 rewrites this file with a literal template line when the build
+  # approval is missing; keep the explicit boolean so it never does.
+  better-sqlite3: true
+  protobufjs: false
+

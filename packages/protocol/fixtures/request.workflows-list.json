@@ -1,0 +1,11 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VEKT",
+  "type": "request",
+  "sentAt": 1787443205000,
+  "op": "workflows.list",
+  "requestId": "01M0NP9G4HP0M1M64H8TC0VEKZ",
+  "params": {
+    "status": "candidate"
+  }
+}

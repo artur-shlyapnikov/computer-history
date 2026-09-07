@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0PCXXGS8P3T9559N9P8A8H9",
+  "type": "event",
+  "sentAt": 1787443203090,
+  "kind": "chat_error",
+  "payload": {
+    "requestId": "01M0PCXXGS8P3T9559N9P8A8H4",
+    "code": "llm_unavailable",
+    "message": "no credentials available for chat model provider \"anthropic\""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "01M0NP9G4HP0M1M64H8TC0VEKN",
+  "observedAt": 1787443203000,
+  "monotonicNs": 841234570000,
+  "source": "input",
+  "app": {
+    "bundleId": "com.apple.Safari",
+    "name": "Safari",
+    "pid": 1042
+  },
+  "action": "teleport",
+  "contentPolicy": "metadata_only"
+}

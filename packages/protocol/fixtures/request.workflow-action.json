@@ -1,0 +1,12 @@
+{
+  "protocolVersion": 1,
+  "messageId": "01M0NP9G4HP0M1M64H8TC0VEKV",
+  "type": "request",
+  "sentAt": 1787443206000,
+  "op": "workflow.action",
+  "requestId": "01M0NP9G4HP0M1M64H8TC0VEKW",
+  "params": {
+    "id": "01M0NP9G4HP0M1M64H8TC0VEKM",
+    "action": "confirm"
+  }
+}
