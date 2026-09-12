@@ -17,6 +17,9 @@ spool/
 run/
 *.log
 
+# Verification proof artifacts (local only, never commit a run)
+verification-evidence/
+
 # Local configuration and credentials
 .env
 .env.*
