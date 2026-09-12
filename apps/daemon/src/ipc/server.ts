@@ -1,5 +1,3 @@
-import { TypeCompiler } from '@sinclair/typebox/compiler';
-
 import { mkdirSync, chmodSync, existsSync, lstatSync, unlinkSync, type Stats } from 'node:fs';
 import net from 'node:net';
 import path from 'node:path';
@@ -7,39 +5,24 @@ import { ulid } from 'ulid';
 
 import {
   PROTOCOL_VERSION,
-  ClientHelloSchema,
   EventBatchAckSchema,
   EventBatchSchema,
   InboundFrameSchema,
   ServerEventFrameSchema,
   ServerEventPayloads,
-  ServerHelloSchema,
-  type ClientHello,
   type EventBatch,
   type ServerEventKind,
 } from '@computer-history/protocol';
 import { CONSTANTS } from '../config.js';
 import type { Logger } from '../logging.js';
+import {
+  buildServerHello,
+  errorFrame,
+  isEnvelopeLike,
+  judgeHandshake,
+  schemaCheck,
+} from './protocol-handshake.js';
 import type { Router } from './router.js';
-
-
-/**
- * Outbound protocol-level error frames (handshake/bad frame rejections).
- *
- * The client's messageId is echoed only when it is itself a well-formed ULID;
- * attacker-controlled junk (arbitrary strings, oversized ids) is replaced by a
- * server-generated id so every outbound frame still satisfies the protocol's
- * Ulid-typed EnvelopeFields.messageId.
- */
-function errorFrame(messageId: string, code: string, message: string) {
-  return {
-    protocolVersion: PROTOCOL_VERSION,
-    messageId: ULID_PATTERN.test(messageId) ? messageId : ulid(),
-    type: 'error' as const,
-    sentAt: Date.now(),
-    error: { code, message },
-  };
-}
 
 function encodeFrame(payload: object): Buffer {
   const body = Buffer.from(JSON.stringify(payload), 'utf8');
@@ -62,8 +45,6 @@ function settleWithin(tasks: ReadonlySet<Promise<unknown>>, ms: number): Promise
   });
 }
 
-/** Canonical ULID shape (Crockford base32, 26 chars) — mirrors the protocol schema. */
-const ULID_PATTERN = /^[0-9ABCDEFGHJKMNPQRSTVWXYZ]{26}$/;
 /** Default cap on simultaneously connected sockets; overridable per instance (tests). */
 const DEFAULT_MAX_CONNECTIONS = 16;
 /**
@@ -92,18 +73,6 @@ export interface IpcServerOptions {
   rejectLingerTimeoutMs?: number;
   /** Max time a reject waits for coalesced in-flight handlers to settle; overridable per instance (tests). */
   rejectDrainTimeoutMs?: number;
-}
-
-// Compiled-once schema checks shared by every connection.
-const compiledChecks = new Map<object, (v: unknown) => boolean>();
-function schemaCheck(schema: object, value: unknown): boolean {
-  let check = compiledChecks.get(schema);
-  if (!check) {
-    const compiled = TypeCompiler.Compile(schema as never);
-    check = (v: unknown) => compiled.Check(v);
-    compiledChecks.set(schema, check);
-  }
-  return check(value);
 }
 
 interface ConnectionState {
@@ -481,35 +450,25 @@ export class IpcServer {
   }
 
   private onHandshakeFrame(socket: net.Socket, state: ConnectionState, parsed: unknown): void {
-    if (!isEnvelopeLike(parsed) || !schemaCheck(ClientHelloSchema, parsed)) {
-      this.reject(
-        socket,
-        state,
-        'error.bad_frame',
-        'first frame must be client_hello',
-        isEnvelopeLike(parsed) ? parsed.messageId : undefined,
-      );
+    const verdict = judgeHandshake(parsed);
+    if (verdict.kind === 'reject') {
+      if (verdict.code === 'error.protocol_version') {
+        this.rejectProtocolVersion(socket, state, verdict.messageId, verdict.offered);
+      } else {
+        this.reject(socket, state, verdict.code, verdict.message, verdict.messageId);
+      }
       return;
     }
-    const hello = parsed as unknown as ClientHello;
-    if (hello.protocolVersion !== PROTOCOL_VERSION) {
-      this.rejectProtocolVersion(socket, state, hello.messageId, hello.protocolVersion);
-      return;
-    }
-    const serverHello = {
-      protocolVersion: PROTOCOL_VERSION,
-      messageId: hello.messageId,
-      type: 'server_hello' as const,
-      sentAt: Date.now(),
-      daemonVersion: this.options.daemonVersion,
-      databaseSchemaVersion: this.options.databaseSchemaVersion,
-    };
-    if (!schemaCheck(ServerHelloSchema, serverHello)) {
-      throw new TypeError('constructed ServerHello failed its own schema');
-    }
+    const serverHello = buildServerHello(
+      verdict.hello,
+      this.options.daemonVersion,
+      this.options.databaseSchemaVersion,
+    );
     state.handshaken = true;
     this.send(socket, encodeFrame(serverHello));
-    this.options.logger.log('info', 'ipc', 'handshake complete', { appVersion: hello.appVersion });
+    this.options.logger.log('info', 'ipc', 'handshake complete', {
+      appVersion: verdict.hello.appVersion,
+    });
   }
 
   /**
@@ -691,13 +650,3 @@ export class IpcServer {
   }
 }
 
-function isEnvelopeLike(value: unknown): value is { messageId: string; [key: string]: unknown } {
-  if (typeof value !== 'object' || value === null) return false;
-  const v = value as Record<string, unknown>;
-  return (
-    typeof v.protocolVersion === 'number' &&
-    typeof v.messageId === 'string' &&
-    typeof v.type === 'string' &&
-    typeof v.sentAt === 'number'
-  );
-}
