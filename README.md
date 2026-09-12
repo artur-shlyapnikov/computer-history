@@ -138,7 +138,7 @@ yet can appear in results but cannot open an episode.
 
 Ask sends a question about the recorded history and streams the answer. It
 needs a working provider credential. Without one, the daemon reports
-`llm_unavailable`; local capture, the SQLite history, and full-text search still
+`llm_unavailable`. Local capture, the SQLite history, and full-text search still
 work.
 
 Memories shows suggested, confirmed, and rejected memory rows. Confirm or reject
@@ -212,7 +212,7 @@ The daemon is the only SQLite writer. The recorder never opens the database.
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `off`      | A fact-only event with the app and action. The recorder omits window, target, and content fields.                                                                                        |
 | `metadata` | App, window, and target metadata. The recorder drops content. This is the default.                                                                                                       |
-| `content`  | Accessibility text after filtering. Secure fields and sensitive labels have no content. Known secret patterns become `[REDACTED]`; content that remains over 2048 characters is dropped. |
+| `content`  | Accessibility text after filtering. Secure fields and sensitive labels have no content. Known secret patterns become `[REDACTED]`. Content that remains over 2048 characters is dropped. |
 
 Secure text fields are never read. The recorder also scrubs secret patterns in
 window titles. Built-in checks cover PEM private-key blocks, common API-key
@@ -220,7 +220,7 @@ shapes, and Luhn-valid card-number-like values. The daemon applies a second
 privacy check at ingest.
 
 The project never stores raw keystrokes, screenshots, clipboard contents, or
-secure-field text. The filter reduces accidental capture; it cannot recognize
+secure-field text. The filter reduces accidental capture. It cannot recognize
 every sensitive value. Use `off` for applications that handle especially
 sensitive material.
 
@@ -259,7 +259,7 @@ Episodes, confirmed memories, and confirmed or rejected workflow rows do not
 expire on a timer. A range delete removes matching events, steps, episodes,
 evidence, and workflow occurrences in one transaction. It can also remove
 candidate workflows that fall below their occurrence thresholds. A manually
-confirmed memory survives range deletes and retention; only `Forget` removes it.
+confirmed memory survives range deletes and retention. Only `Forget` removes it.
 
 The recorder rotates spool files at about 512 KiB, keeps at most 25 MiB of spool
 data, and purges files older than 48 hours. It drops the oldest files when the
@@ -302,7 +302,7 @@ permissions. The manual seven-day procedure is in
   retention and can pause recording. Recording resumes after free space reaches
   about 1.2 GiB. The recorder spools events while the daemon refuses batches.
 - If SQLite `integrity_check` fails at startup, the daemon exits with code 46
-  and does not recreate the database. Recovery is manual; the recorder reports
+  and does not recreate the database. Recovery is manual. The recorder reports
   a degraded daemon state.
 - Missing LLM credentials do not stop local capture or search, but background
   jobs retry and Ask returns `llm_unavailable`.
